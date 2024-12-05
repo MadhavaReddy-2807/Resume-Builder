@@ -35,7 +35,7 @@ const Skills = () => {
     setLoading(false);
     e.preventDefault();
     console.log(skill)
-    const res = await fetch("http://localhost:3000/resumes", {
+    const res = await fetch(import.meta.env.VITE_SERVER_URL+"resumes", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

@@ -10,7 +10,7 @@ const Dashboard = () => {
       getresumes();
   }, [])
   const getresumes=async()=>{
-     const res=await fetch(`http://localhost:3000/resumelist?email=${user.primaryEmailAddress?.emailAddress}`);
+     const res=await fetch(import.meta.env.VITE_SERVER_URL+`resumelist?email=${user.primaryEmailAddress?.emailAddress}`);
      const data=await res.json();
      console.log(data);
      setResumelist(data);

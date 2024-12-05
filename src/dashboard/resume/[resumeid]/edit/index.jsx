@@ -12,7 +12,7 @@ const EditResume = () => {
     }, [])
     useEffect(() => {
       const fetchResume = async () => {
-        const res = await fetch(`http://localhost:3000/resumes?id=${params.resumeid}`);
+        const res = await fetch(import.meta.env.VITE_SERVER_URL+`resumes?id=${params.resumeid}`);
         const data = await res.json();
         console.log(data);
         setResumeinfo(data); // Update the state here

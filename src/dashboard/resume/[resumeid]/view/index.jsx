@@ -16,7 +16,7 @@ const View = () => {
 
     useEffect(() => {
         const fetchResume = async () => {
-            const res = await fetch(`http://localhost:3000/resumes?id=${params.resumeid}`);
+            const res = await fetch(import.meta.env.VITE_SERVER_URL+`resumes?id=${params.resumeid}`);
             const data = await res.json();
             console.log(data);
             setResumeinfo(data);
@@ -43,7 +43,7 @@ const View = () => {
                         <RWebShare
                             data={{
                                 text: "Check my resume",
-                                url: import.meta.env.VITE_BASE_URL+"dashboard"+"/resume/"+resumeid+"/view",
+                                url: import.meta.env.VITE_SERVER_URL+"dashboard"+"/resume/"+resumeid+"/view",
                                 title: "Resume",
                             }}
                             onClick={() => console.log("shared successfully!")}

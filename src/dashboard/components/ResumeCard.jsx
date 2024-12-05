@@ -20,7 +20,7 @@ const ResumeCard = ({ resume }) => {
   };
 
   const deleteresume = async () => {
-    const res = await fetch("http://localhost:3000/resumes", {
+    const res = await fetch(import.meta.env.VITE_SERVER_URL+"resumes", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
