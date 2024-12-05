@@ -1,0 +1,1 @@
+console.log(import.meta.VITE_GOOGLE_AI_API_KEY)
