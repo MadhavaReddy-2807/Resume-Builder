@@ -9,7 +9,7 @@ import Login from './login'
 import { ClerkProvider } from '@clerk/clerk-react'
 import EditResume from './dashboard/resume/[resumeid]/edit'
 import View from './dashboard/resume/[resumeid]/view'
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE
 const router=createBrowserRouter([
   {
     element:<App/>,
