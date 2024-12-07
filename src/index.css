@@ -4,7 +4,7 @@
 
 /* ... */
 .card{
-  background-image: url('public/cv.png');
+  background-image: url('/cv.png');
   /* backface-visibility: visible; */
   background-size: 30%;
   background-repeat: no-repeat;
