@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { ToastContainer, toast } from 'react-toastify';
+// import {NotificationContainer, NotificationManager} from 'react-notifications';
 import { Button } from './components/ui/button'
 import { Outlet } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
@@ -15,6 +17,8 @@ import Spline from '@splinetool/react-spline';
 
 // import Splineapp from './spline/spline'
 function App() {
+  // const {user}=useUser();
+
   // const navigate=useNavigate();
   const [count, setCount] = useState(0)
   const {user,isLoaded,isSignedIn}=useUser();
@@ -29,7 +33,7 @@ function App() {
     //during conditional rendering use this instead of navigate
     //it navigates to login page
   }
-
+ 
   return (
       <>
          <Header/>

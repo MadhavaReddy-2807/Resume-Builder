@@ -2,8 +2,11 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useContext, useState } from 'react'
 import React from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 import { Resumeinfo } from '@/context/resumeinfo'
 import { Loader } from 'lucide-react'
+import 'react-toastify/dist/ReactToastify.css';
+// import { toast } from 'react-toastify'
 const Personal = ({enableNext}) => {
    const handlechange=(e)=>{
       setSaving(true)
@@ -28,11 +31,12 @@ const Personal = ({enableNext}) => {
         })
       });
       setLoading(false);
-        
-        
+          toast('Saved')
       }
   return (
     <div className='p-5 shadow-lg rounded border-t-sky-400 border-t-[5px]'>
+        <ToastContainer />
+
        <h2 className='font-bold font'>Personal detail</h2>
        <p className='font-semibold text-md'>
         Get Started with the basic information

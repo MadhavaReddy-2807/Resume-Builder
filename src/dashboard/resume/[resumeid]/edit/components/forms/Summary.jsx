@@ -2,6 +2,9 @@ import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import React, { useState } from 'react'
 import { useContext } from 'react'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+
 import { Resumeinfo } from '@/context/resumeinfo'
 import { AIchatSession } from '@/gemini/gemini'
 import { Brain, Loader } from 'lucide-react'
@@ -27,6 +30,8 @@ const Summary = ({enableNext}) => {
     });
     // setSaving(false)
     setLoader(false)
+    toast('Saved')
+
   }
   const[loader,setLoader]=useState(false)
    const[save,setSave]=useState(false);
@@ -44,6 +49,8 @@ const Summary = ({enableNext}) => {
   const{resumeinfo,setResumeinfo}=useContext(Resumeinfo)
   return (
     <div className='p-5 shadow-lg rounded border-t-sky-400 border-t-[5px]'><h2 className='font-bold font'>Summary</h2>
+  
+  <ToastContainer />
   <form action="" onSubmit={handlesubmit}>
       <p className='font-semibold text-md'>
         Add summary to your job title     </p>  <div className='flex flex-col md:flex-row   mt-5 justify-between'> <span className='font-semi bold text-lg '>Add summary </span> <Button variant="outline" className="border-blue-400" onClick={generatesummary}>{loading?<Loader className='animate-spin'/>: <Brain className='h-4 w-4'/>}{!loading?"Generate from AI":"Generating"}</Button></div>

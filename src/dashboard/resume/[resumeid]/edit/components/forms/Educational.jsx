@@ -5,6 +5,9 @@ import { Button } from '@/components/ui/button'
 import { Loader, PlusCircle } from 'lucide-react'
 import { Resumeinfo } from '@/context/resumeinfo'
 import { useContext } from 'react'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+
 const form = {
   id: 1,
   universityName: 'Western Illinois University',
@@ -48,7 +51,7 @@ const Educational = () => {
       })
     });
      setLoading(true)
-    console.log("saved")
+     toast('Saved')
 
   }
   const [loading,setLoading]=useState(true);
@@ -58,6 +61,8 @@ const Educational = () => {
  },[education])
   return (
     <div className='p-5 shadow-lg rounded border-t-sky-400 border-t-[5px]'>
+                      <ToastContainer />
+
         <h2 className='font-bold font-serif' >Education</h2>
         <div className='mb-3'> Add  education</div>
             <form action="" onSubmit={submit}>

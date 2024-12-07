@@ -8,6 +8,9 @@ import { PlusCircle, PlusSquare } from 'lucide-react'
 import Richtexteditot from '@/components/ui/Richtexteditot'
 import { Loader } from 'lucide-react'
 import { Brain } from 'lucide-react'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+
 import { AIchatSession } from '@/gemini/gemini'
 const Experience = () => {
   const form = {
@@ -34,6 +37,7 @@ const Experience = () => {
       })
     });
     setsaveLoading(false)
+    toast('Saved')
 
   }
   const [loading, setLoading] = useState(false)
@@ -79,13 +83,14 @@ const Experience = () => {
   const [experience, setExperience] = useState(resumeinfo?.experience ? resumeinfo?.experience : form)
   useEffect(() => {
     setResumeinfo({ ...resumeinfo, experience: experience })
-    console.log(resumeinfo?.experience)
-    console.log("SAVED")
     //  setSave(true)
   }, [experience])
    const[save,setSave]=useState(false);
   return (
-    <>   <div className='p-5 shadow-lg rounded border-t-sky-400 border-t-[5px]'><h2 className='font-bold font'>Professional Experience</h2>
+    <>   <div className='p-5 shadow-lg rounded border-t-sky-400 border-t-[5px]'>
+                    <ToastContainer />
+
+      <h2 className='font-bold font'>Professional Experience</h2>
       <p className='font-semibold text-md mb-3'>Add Your previous Job experience
       </p>
       <div className='border p-3 rounded  '>

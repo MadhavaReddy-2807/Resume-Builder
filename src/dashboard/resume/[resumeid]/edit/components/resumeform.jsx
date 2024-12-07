@@ -13,7 +13,7 @@ import {
 import Skills from './forms/Skills'
 import { Resumeinfo } from '@/context/resumeinfo'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, ArrowLeftSquare, ArrowRight, HomeIcon, Layout, LayoutGrid } from 'lucide-react'
+import { ArrowLeft, ArrowLeftSquare, ArrowRight, CircleDashed, HomeIcon, Layout, LayoutGrid } from 'lucide-react'
 import { Navigate } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 const Resumeform = () => {
@@ -43,6 +43,9 @@ const Resumeform = () => {
   const gohome = () => {
     navigate('/')
   }
+  const godas=()=>{
+    navigate('/dashboard')
+  }
   const [selectedColor,setSelectedColor]=useState();
   const onColorSelect=(color)=>{
     setSelectedColor(color)
@@ -53,7 +56,10 @@ const Resumeform = () => {
       <header className='flex justify-between mb-5'>
         <div className='flex '>
           <div>
-          <Button onClick={gohome}><HomeIcon /></Button></div>
+            
+          <Button onClick={gohome} className=" hidden md:block"><HomeIcon /></Button>
+          <Button onClick={godas} className=" block md:hidden"><HomeIcon /></Button>
+          </div>
           <Popover>
             <PopoverTrigger className='ml-1' ><Button variant="outline" className="ml-1"><LayoutGrid />Theme </Button></PopoverTrigger>
             <PopoverContent><div className='grid grid-cols-5 gap-3'>

@@ -7,6 +7,9 @@ import { PlusCircle } from 'lucide-react';
 import { Loader } from 'lucide-react';
 import { Resumeinfo } from '@/context/resumeinfo';
 import { useContext } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // import e from 'express';
 const form= {
   name:'',
@@ -47,6 +50,8 @@ const Skills = () => {
       })
     });
     setLoading(true)
+    toast('Saved')
+
   }
   const { resumeinfo, setResumeinfo } = useContext(Resumeinfo)
   const[loading,setLoading]=useState(true);
@@ -66,6 +71,7 @@ const Skills = () => {
   },[skill])
   return (
     <div className='p-5 shadow-lg rounded border-t-sky-400 border-t-[5px]'>
+              <ToastContainer />
        <h2 className='font-bold font-serif' >Skill</h2>
        <div className='mb-3'> Add your skills</div>
        <form action="" type="submit">
