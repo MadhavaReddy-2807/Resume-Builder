@@ -1,8 +1,30 @@
-# React + Vite
+# AI Resume Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An advanced AI-powered Resume Builder web application built using **React + Vite** for the frontend, **MongoDB** for the backend, and **Clerk** for authentication. This application allows users to create, edit, download, and share resumes seamlessly.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+
+- **AI-Assisted Resume Suggestions**: Automatically generate resume content with AI.
+- **User Authentication**: Secure user login and signup using Clerk.
+- **Real-Time Resume Builder**: Edit personal details, education, experience, and more.
+- **Download and Share Options**: Download your resume as a PDF or share it via a unique link.
+- **Responsive Design**: Fully optimized for desktops, tablets, and mobile devices.
+- **Backend Integration**: Stores user resume data in MongoDB for real-time updates.
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend:
+- [React](https://reactjs.org/) + [Vite](https://vitejs.dev/): For a fast and responsive user interface.
+- [Tailwind CSS](https://tailwindcss.com/): For modern, utility-first styling.
+- [Clerk](https://clerk.dev/): For authentication and user management.
+
+### Backend:
+- [MongoDB](https://www.mongodb.com/): As the database for storing resume data.
+- [Node.js](https://nodejs.org/) with [Express.js](https://expressjs.com/): For server-side functionality.
+
+---
+
