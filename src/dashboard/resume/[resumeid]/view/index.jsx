@@ -43,7 +43,7 @@ const View = () => {
                         <RWebShare
                             data={{
                                 text: "Check my resume",
-                                url: import.meta.env.VITE_SERVER_URL+"dashboard"+"/resume/"+resumeid+"/view",
+                                url: import.meta.env.VITE_BASE_URL+"dashboard"+"/resume/"+resumeid+"/view",
                                 title: "Resume",
                             }}
                             onClick={() => console.log("shared successfully!")}
