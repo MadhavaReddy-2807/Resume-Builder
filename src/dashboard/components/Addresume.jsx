@@ -66,7 +66,7 @@ const Addresume = () => {
       </DialogDescription>
        <div className='flex justify-end gap-4'>
           <Button variant='ghost ' onClick={()=>{setDialog(false)}} className='border'>Cancel</Button>
-          <Button disabled={!resumetitle} onClick={()=>{create()}}>{loading?<Loader2/>:"Create"}
+          <Button disabled={!resumetitle} onClick={()=>{create()}}>{loading?<Loader2 className="animate-spin"/>:"Create"}
             
             </Button>
        </div>
